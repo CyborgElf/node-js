@@ -6,6 +6,7 @@ var bot = new Discord.Client();
 
 bot.on("ready", function(){
     console.log("Ready");
+    bot.user.setGame("Managing over 500 servers!");
 });
 
 bot.on("message", function(message) {
@@ -16,6 +17,12 @@ bot.on("message", function(message) {
         message.channel.send("Hi, there!");
     }
 
+    var readline = require('readline-sync');
+    var input = readline
+    if (input !== null) {
+        
+        message.channel.send(input);
+    }
 });
 
 bot.login(TOKEN);
