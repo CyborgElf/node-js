@@ -1,12 +1,16 @@
 const Discord = require("discord.js");
-
-const TOKEN = "NTA0NDgwMzgwNzAzOTk3OTUz.DrivEA.w6gvk57oGSr5wck9gxrrZjP3u6Q";
+var fs = require('fs');
+const data = 0;
+fs.readFile('token.txt', 'utf8', function(err, data) {  
+    if (err) throw err;
+    console.log(data);
+});
 
 var bot = new Discord.Client();
 
 bot.on("ready", function(){
     console.log("Ready");
-    bot.user.setGame("Managing over 500 servers!");
+    bot.user.setGame("V1.0");
 });
 
 bot.on("message", function(message) {
@@ -16,13 +20,6 @@ bot.on("message", function(message) {
     if (message.content == "hello") {
         message.channel.send("Hi, there!");
     }
-
-    var readline = require('readline-sync');
-    var input = readline
-    if (input !== null) {
-        
-        message.channel.send(input);
-    }
 });
 
-bot.login(TOKEN);
+bot.login(data);
