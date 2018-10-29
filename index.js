@@ -4,6 +4,7 @@ const data = 0;
 fs.readFile('token.txt', 'utf8', function(err, data) {  
     if (err) throw err;
     console.log(data);
+    bot.login(data);
 });
 
 var bot = new Discord.Client();
@@ -21,5 +22,3 @@ bot.on("message", function(message) {
         message.channel.send("Hi, there!");
     }
 });
-
-bot.login(data);
