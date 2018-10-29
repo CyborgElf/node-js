@@ -1,4 +1,3 @@
-
 const Discord = require("discord.js");
 
 const TOKEN = "NTA0NDgwMzgwNzAzOTk3OTUz.DrivEA.w6gvk57oGSr5wck9gxrrZjP3u6Q";
@@ -15,6 +14,13 @@ bot.on("message", function(message) {
 
     if (message.content == "hello") {
         message.channel.send("Hi, there!");
+    }
+
+    var readline = require('readline-sync');
+    var input = readline
+    if (input !== null) {
+        
+        message.channel.send(input);
     }
 });
 
