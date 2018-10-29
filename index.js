@@ -11,14 +11,14 @@ var bot = new Discord.Client();
 
 bot.on("ready", function(){
     console.log("Ready");
-    bot.user.setGame("V1.0");
+    bot.user.setGame("type !help");
 });
 
 bot.on("message", function(message) {
     console.log(message.content);
     if (message.author.equals(bot.user)) return;
 
-    if (message.content == "hello") {
-        message.channel.send("Hi, there!");
+    if (message.content.toLowerCase() == "!help") {
+        message.channel.send("!STFU!");
     }
 });
