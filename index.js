@@ -3,7 +3,7 @@ var fs = require('fs');
 const data = 0;
 fs.readFile('token.txt', 'utf8', function(err, data) {  
     if (err) throw err;
-    console.log(data);
+    //console.log(data);
     bot.login(data);
 });
 
