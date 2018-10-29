@@ -16,12 +16,6 @@ bot.on("message", function(message) {
         message.channel.send("Hi, there!");
     }
 
-    var readline = require('readline-sync');
-    var input = readline
-    if (input !== null) {
-        
-        message.channel.send(input);
-    }
 });
 
 bot.login(TOKEN);
